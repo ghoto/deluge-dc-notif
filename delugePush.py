@@ -2,7 +2,7 @@
 
 import os
 import sys
-import urllib2
+import urllib.request
 import json
 from threading import Timer
 
@@ -36,11 +36,11 @@ def sendMessage(normalText, title, body, footer=""):
         ]
     }
 
-    data = json.dumps(values)
-    req = urllib2.Request(WEBHOOK_URL, data)
+    data = json.dumps(values).encode('UTF-8')
+    req = urllib.request.Request(WEBHOOK_URL, data=data)
     req.add_header('Content-Type', 'application/json')
     req.add_header('User-Agent', 'Chrome')
-    response = urllib2.urlopen(req)
+    response = urllib.request.urlopen(req)
 
 def getSize(lines):
     for line in lines:
