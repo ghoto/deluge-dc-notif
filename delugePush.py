@@ -53,7 +53,7 @@ def getSize(lines):
 
 def getState(torrentHash, torrentName, delayTime=0, delayCall=False):
 
-    delugeCommand = 'deluge-console \"connect 127.0.0.1:' + DELUGE_PORT + ' '  + DELUGE_USERNAME + ' ' + DELUGE_PASSWORD + ' ; info '
+    delugeCommand = 'deluge-console -c 'DELUGE_CONFIG_PATH' \"connect 127.0.0.1:' + DELUGE_PORT + ' '  + DELUGE_USERNAME + ' ' + DELUGE_PASSWORD + ' ; info '
 
     if (DELUGE_VERSION[0] == '2'):
         delugeCommand += '-v '

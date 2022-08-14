@@ -7,4 +7,5 @@ DISCORD_ID = "123456789012345678" #ONLY required is sendTag is True. Set to your
 RATIO_CHECK_DELAY = 0 #Number of seconds after torrent completion to send another ratio update. Set to 0 to disable.
 BOT_USERNAME = "Deluge" #The username that will appear as the sender fo rnotifications. Set to whatever u want
 BOT_AVATAR = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Deluge-Logo.svg/1200px-Deluge-Logo.svg.png" #Avatar of the "bot" in discord. PNG recommened
+DELUGE_CONFIG_PATH = "/config" # Added when deluge-console can't access config file in docker
 DELUGE_VERSION = "1.3.15" #Only the first character matches, so 2.0.3 will be same as 2.0.1, and 1.3.15 same as 1.3.0. Make sure first character is 1 (or 2) only.
